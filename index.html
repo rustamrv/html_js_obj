@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="main-container ms-5">
+      <!-- Main Content -->
+      <div class="col-md-9 col-lg-10 main-content" id="mainContent">
+        <h1 class="text-center mb-4">Home work</h1>
+        <section class="mb-4" id="min">
+          <h2>Мінімум</h2>
+          <section class="mb-4">
+            <h4>Опис автомобіля</h4>
+            <div class="mb-3">
+              <button class="btn btn-primary" onclick="displayCarInfo()">Вивести інформацію про авто</button>
+            </div>
+            <div class="mb-3">
+              <input type="text" id="driverName" class="form-control" placeholder="Додати ім'я водія" />
+              <button class="btn btn-secondary mt-2" onclick="addDriver()">Додати водія</button>
+            </div>
+            <div class="mb-3">
+              <input type="number" id="distance" class="form-control" placeholder="Введіть відстань (км)" />
+              <button class="btn btn-success mt-2" onclick="calculateTrip()">Розрахувати подорож</button>
+            </div> 
+          </section>
+          <h3>Інші функції в консоле</h3>
+        </section>
+
+        <section class="me-5 p-3 bg-white border border-primary">
+          <h4>Результати:</h4>
+          <div id="output"  class="mt-3 text-info"></div>
+        </section>
+
+        <section class="mb-4" id="norma">
+          <h2>Норма</h2>
+          <section class="mb-4">
+            <h4>Робота з часом</h4>
+            <div class="mb-3">
+              <button class="btn btn-primary" onclick="displayTime()">Вивести час</button>
+            </div>
+            <div class="mb-3">
+              <input type="number" id="addSeconds" class="form-control" placeholder="Додати секунди" />
+              <button class="btn btn-secondary mt-2" onclick="addTime('seconds')">Додати секунди</button>
+            </div>
+            <div class="mb-3">
+              <input type="number" id="addMinutes" class="form-control" placeholder="Додати хвилини" />
+              <button class="btn btn-secondary mt-2" onclick="addTime('minutes')">Додати хвилини</button>
+            </div>
+            <div class="mb-3">
+              <input type="number" id="addHours" class="form-control" placeholder="Додати години" />
+              <button class="btn btn-secondary mt-2" onclick="addTime('hours')">Додати години</button>
+            </div> 
+          </section> 
+
+
+          <section class="me-5 p-3 bg-white border border-primary">
+            <h4>Результати:</h4>
+            <div id="timeOutput"  class="mt-3 text-info"></div>
+          </section>
+
+        </section>
+
+        <section class="mb-4" id="max">
+          <h2>Максимум</h2>
+          <section class="mb-4">
+            <h4>Робота з дробами</h4>
+            <div class="mb-3">
+              <input type="number" id="numerator1" class="form-control mb-2" placeholder="Чисельник першого дробу" />
+              <input type="number" id="denominator1" class="form-control mb-2" placeholder="Знаменник першого дробу" />
+              <input type="number" id="numerator2" class="form-control mb-2" placeholder="Чисельник другого дробу" />
+              <input type="number" id="denominator2" class="form-control mb-2" placeholder="Знаменник другого дробу" />
+            </div>
+            <div class="mb-3">
+              <button class="btn btn-primary mb-2" onclick="addFractions()">Скласти дроби</button>
+              <button class="btn btn-secondary mb-2" onclick="subtractFractions()">Відняти дроби</button>
+              <button class="btn btn-success mb-2" onclick="multiplyFractions()">Помножити дроби</button>
+              <button class="btn btn-danger mb-2" onclick="divideFractions()">Поділити дроби</button>
+              <button class="btn btn-warning" onclick="simplifyFraction()">Скоротити перший дріб</button>
+            </div> 
+          </section> 
+
+
+          <section class="me-5 p-3 bg-white border border-primary">
+            <h4>Результати:</h4>
+            <div id="fractionOutput"  class="mt-3 text-info"></div>
+          </section>
+
+        </section>
+      
+      </div>
+    </div>
+  </body>
+  <script src="assets/js/main.js"></script>
+
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"
+  ></script>
+</html>
